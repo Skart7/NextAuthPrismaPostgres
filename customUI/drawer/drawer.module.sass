@@ -1,0 +1,49 @@
+@import '../../styles/vars'
+
+
+.drawerOverlay
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    max-width: 100%
+    max-height: 100%
+    background-color: rgba($background-paper, .45)
+    transition: all .25s linear
+
+    &.show 
+        z-index: $index-drawer
+        opacity: 1
+    &.hidden 
+        z-index: -$index-drawer
+        opacity: 0
+
+    .left 
+        position: absolute
+        top: 0
+        width: 300px
+        height: 100%
+        background-color: $background-default
+        box-shadow: 5px 0px 5px 1px rgba(0,0,0,0.1)
+        transition: all .3s linear
+
+        &.show
+            left: 0
+        &.hidden
+            left: -100%
+
+
+    .right 
+        position: absolute
+        top: 0
+        width: 300px
+        height: 100%
+        background-color: $background-paper
+        box-shadow: -5px 0px 5px 1px rgba(0,0,0,0.1)
+        transition: all .3s linear
+
+        &.show
+            right: 0
+        &.hidden
+            right: -100%

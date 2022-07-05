@@ -1,0 +1,182 @@
+@import '../../styles/vars'
+
+.inputArea
+    position: relative
+    min-width: 275px
+    max-width: 100%
+
+.label 
+    color: $caption
+    position: absolute
+    top: 0
+    left: 0.7rem
+    font-weight: 400
+    font-family: $font-text
+    transition: all 0.2s ease-in-out
+    pointer-events: none
+    transform: translateY(10px)
+    background-color: $background-default
+    padding: 0 5px
+
+    &.small
+        font-size: 0.75rem
+    &.medium
+        font-size: 0.8rem
+    &.large
+        font-size: 0.9rem
+
+.standard 
+    outline: none
+    border: none
+    border-bottom: 1px solid $caption
+    background: none
+    font-weight: 400
+    letter-spacing: 0.05rem
+    font-family: $font-text
+    padding: 0.6rem 
+    display: block
+
+    &.fullWidth 
+        width: 100%
+
+    &.small
+        font-size: 0.75rem
+    &.medium
+        font-size: 0.8rem
+    &.large
+        font-size: 1rem
+
+    &.primary
+        &:focus
+            border-color: $primary
+        &:focus + .label
+            color: $primary
+            font-size: 0.7rem
+            transform: translateY(-10px)
+        &:valid + .label
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    &.secondary
+        &:focus
+            border-color: $secondary
+        &:focus + .label
+            color: $secondary
+            font-size: 0.7rem
+            transform: translateY(-10px)
+        &:valid + .label
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    &.error
+        &:focus
+            border-color: $error
+        &:focus + .label
+            color: $error
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    &.success
+        &:focus
+            border-color: $success
+        &:focus + .label
+            color: $success
+            font-size: 0.7rem
+            transform: translateY(-10px)
+        &:valid + .label
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    
+.outlined
+    outline: none
+    border: 1px solid $caption
+    border-radius: 0.5rem
+    background: transparent
+    font-weight: 400
+    letter-spacing: 0.05rem
+    font-family: $font-text
+    padding: 0.6rem 
+    display: block
+
+    &.fullWidth 
+        width: 100%
+
+    &.small
+        font-size: 0.75rem
+    &.medium
+        font-size: 0.8rem
+    &.large
+        font-size: 1rem
+
+    &.primary
+        &:focus
+            border-color: $primary
+        &:focus + .label
+            color: $primary
+            font-size: 0.7rem
+            transform: translateY(-10px)
+        &:valid + .label
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    &.secondary
+        &:focus
+            border-color: $secondary
+        &:focus + .label
+            color: $secondary
+            font-size: 0.7rem
+            transform: translateY(-10px)
+        &:valid + .label
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    &.error
+        &:focus
+            border-color: $error
+        &:focus + .label
+            color: $error
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    &.success
+        &:focus
+            border-color: $success
+        &:focus + .label
+            color: $success
+            font-size: 0.7rem
+            transform: translateY(-10px)
+        &:valid + .label
+            font-size: 0.7rem
+            transform: translateY(-10px)
+    
+.clear
+    outline: none
+    border: none
+    border-radius: 0.5rem
+    background: $background-paper
+    font-weight: 400
+    letter-spacing: 0.05rem
+    font-family: $font-text
+    padding: 0.6rem 
+    display: block
+
+    & + .label
+        display: none 
+
+    &.fullWidth 
+        width: 100%
+
+    &.small
+        font-size: 0.75rem
+    &.medium
+        font-size: 0.8rem
+    &.large
+        font-size: 1rem
+
+    &.primary
+        &:focus
+            outline: 2px $primary solid
+        
+    &.secondary
+        &:focus
+            outline: 2px $secondary solid
+    &.error
+        &:focus
+            outline: 2px $error solid
+    &.success
+        &:focus
+            outline: 2px $success solid

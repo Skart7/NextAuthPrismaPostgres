@@ -1,0 +1,33 @@
+@import '../../styles/vars'
+
+.badgeWrapper
+    position: relative
+
+.standard
+    border-radius: 10px
+    padding: 2px 6px
+    font-size: 0.7rem
+    font-weight: 400
+    position: absolute
+    font-family: $font-text
+    cursor: default
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1)
+    top: 3px
+    right: 5px
+    
+    &.primary 
+        color: $primary-text-content
+        background-color: $primary
+    &.secondary 
+        color: $secondary-text-content
+        background-color: $secondary
+    &.success 
+        color: $success-text-content
+        background-color: $success
+    &.error 
+        color: $error-text-content
+        background-color: $error
+    &.none 
+        display: none
+    &.block 
+        display: block

@@ -1,0 +1,78 @@
+@import '../vars'
+
+.cart
+    padding: 15px
+    max-width: 450px
+    width: 100% !important
+
+.cartHeader 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+
+.cartList
+    margin: 10px 0
+    overflow: hidden
+    overflow-y: scroll
+    min-height: 85%
+    max-height: 85%
+    padding: 10px
+
+.cartFooter
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 10px
+
+.cartEmpty
+    margin: 15px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 85%
+    max-height: 85%
+    padding: 10px
+
+.cartTotalText 
+    color: $primary
+// card
+
+.card
+    margin-bottom: 10px
+    display: flex
+    align-items: center
+    
+.cardDelete
+    text-align: center
+
+.cardImage
+    position: relative
+    width: 100%
+    max-width: 110px
+    height: 100%    
+    text-align: center
+    padding: 0 5px
+
+.cardContentPrice
+    display: flex
+    grid-gap: 1vh
+    align-items: center
+    justify-content: flex-start
+
+.price
+    color: $primary
+.qty
+    width: 35px
+    height: 35px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $primary
+    border-radius: 50%
+
+.cardActionButton
+    display: flex
+    grid-gap: 1vh
+    align-items: center
+    justify-content: flex-end

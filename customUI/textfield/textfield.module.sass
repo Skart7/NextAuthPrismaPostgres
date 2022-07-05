@@ -1,0 +1,179 @@
+@import '../../styles/vars'
+
+.inputGroup
+    width: 18rem
+    margin: 0.2rem 0
+    padding: 0.5rem 0
+    position: relative
+
+    &.fullWidth
+        width: 100%
+
+.inputWrapp
+    position: relative
+    width: 100%
+
+.label
+    position: absolute
+    top: 0
+    left: 0.8rem
+    font-weight: 400
+    font-family: $font-text
+    font-size: 0.9rem
+    transition: all 0.2s ease-in-out
+    pointer-events: none
+    transform: translateY(10px)
+    color: $caption
+
+.textHelper 
+    font-size: 0.8rem
+    font-family: $font-text
+    font-weight: 400
+    pointer-events: none
+    padding: 0.05rem 1rem 0.05rem 1rem    
+
+    &.default
+        color: $caption
+    &.error
+        color: $error
+    &.success
+        color: $success
+
+.standard
+    outline: none
+    border: none
+    background: none
+    font-weight: 400
+    font-family: $font-text
+    width: 100%
+    border-bottom: 1px solid $caption
+
+    &.small
+        padding: 1.2rem 0.6rem 0.2rem 0.6rem
+        font-size: 0.85rem
+        letter-spacing: 0.05rem
+    &.medium
+        padding: 1.2rem 0.8rem 0.2rem 0.8rem
+        font-size: 0.9rem
+        letter-spacing: 0.05rem
+    &.large
+        padding: 1.3rem 0.6rem 0.2rem 0.6rem
+        font-size: 0.95rem
+        letter-spacing: 0.06rem
+
+    &::placeholder 
+        opacity: 0
+    &:focus
+        &.primary
+            border-color: $primary
+        &.secondary
+            border-color: $secondary
+        &.success
+            border-color: $success
+        &.error
+            border-color: $error
+
+    &:focus + .label
+        transform: translateY(5px)
+        font-size: 0.7rem
+        &.primary
+            color: $primary
+        &.secondary
+            color: $secondary
+        &.success
+            color: $success
+        &.error
+            color: $error
+    &:not(:placeholder-shown)
+        &.primary
+            border-color: $primary
+        &.secondary
+            border-color: $secondary
+        &.success
+            border-color: $success
+        &.error
+            border-color: $error
+    &:not(:valid)
+        border-color: $error
+    &:not(:placeholder-shown) + label
+        transform: translateY(5px)
+        font-size: 0.7rem
+        &.primary
+            color: $primary
+        &.secondary
+            color: $secondary
+        &.success
+            color: $success
+        &.error
+            color: $error
+
+.filled
+    outline: none
+    border: none
+    background: none
+    font-weight: 400
+    font-family: $font-text
+    width: 100%
+    background-color: $input-filled-bgc
+    border-bottom: 1px solid $caption
+    border-top-left-radius: 0.5rem
+    border-top-right-radius: 0.5rem
+
+    &.small
+        padding: 1.2rem 0.6rem 0.2rem 0.6rem
+        font-size: 0.85rem
+        letter-spacing: 0.05rem
+    &.medium
+        padding: 1.2rem 0.8rem 0.2rem 0.8rem
+        font-size: 0.9rem
+        letter-spacing: 0.05rem
+    &.large
+        padding: 1.3rem 0.6rem 0.2rem 0.6rem
+        font-size: 0.95rem
+        letter-spacing: 0.06rem
+
+    &::placeholder 
+        opacity: 0
+    &:focus
+        &.primary
+            border-color: $primary
+        &.secondary
+            border-color: $secondary
+        &.success
+            border-color: $success
+        &.error
+            border-color: $error
+
+    &:focus + .label
+        transform: translateY(5px)
+        font-size: 0.7rem
+        &.primary
+            color: $primary
+        &.secondary
+            color: $secondary
+        &.success
+            color: $success
+        &.error
+            color: $error
+    &:not(:placeholder-shown)
+        &.primary
+            border-color: $primary
+        &.secondary
+            border-color: $secondary
+        &.success
+            border-color: $success
+        &.error
+            border-color: $error
+    &:not(:valid)
+        border-color: $error
+    &:not(:placeholder-shown) + label
+        transform: translateY(5px)
+        font-size: 0.7rem
+        &.primary
+            color: $primary
+        &.secondary
+            color: $secondary
+        &.success
+            color: $success
+        &.error
+            color: $error

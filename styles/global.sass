@@ -1,0 +1,40 @@
+@import-normalize
+@import './vars'
+
+*, *::before, *::after
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    color: $text
+
+body, html 
+    width: 100%
+    height: 100%
+    background-color: $background-default
+
+::-webkit-scrollbar 
+    width: 2px
+  
+::-webkit-scrollbar-track 
+    border-radius: 12px
+
+
+::-webkit-scrollbar-thumb 
+    background: $secondary
+    border-radius: 12px
+
+.primaryFill
+    fill: $primary
+.secondaryFill
+    fill: $secondary
+.errorFill
+    fill: $error
+.infoFill
+    fill: $info
+.warningFill
+    fill: $warning
+.successFill
+    fill: $success
+.captionFill
+    fill: $caption
+

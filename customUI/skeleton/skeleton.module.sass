@@ -1,0 +1,31 @@
+@import '../../styles/vars'
+
+.skeleton
+    opacity: 0.7
+    animation: skeleton-loading 1s linear infinite alternate
+
+    &.text 
+        width: 100%
+        height: .3rem
+        margin-bottom: 0.8rem
+        border-radius: .125rem
+
+    &.rectangular
+        width: 100%
+        border-radius: .125rem
+        margin-bottom: 0.8rem
+        height: 8rem
+    &.circular
+        width: 3rem
+        border-radius: 50%
+        margin-bottom: 0.8rem
+        height: 3rem
+
+@keyframes skeleton-loading 
+  0% 
+    background-color: hsl(200, 20%, 20%)
+  
+
+  100%
+    background-color: hsl(200, 20%, 25%)
+  

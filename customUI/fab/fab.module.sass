@@ -1,0 +1,40 @@
+@import '../../styles/vars'
+
+.fab
+    border-radius: 50%
+    position: fixed
+    bottom: 20px
+    right: 20px
+    font-family: $font-text
+    font-weight: 600
+    padding: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    border: none
+    box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.5)
+    z-index: $index-fab
+
+    &.primary
+        background-color: $primary
+    &.secondary
+        background-color: $secondary
+    &.success
+        background-color: $success
+    &.error
+        background-color: $error
+    &.warning
+        background-color: $warning
+    &.info
+        background-color: $info
+
+    &.small
+        width: 30px
+        height: 30px
+    &.medium
+        width: 45px
+        height: 45px
+    &.large
+        width: 55px
+        height: 55px

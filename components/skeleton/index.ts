@@ -1,0 +1,1 @@
+export {IconSkeleton} from './icon'

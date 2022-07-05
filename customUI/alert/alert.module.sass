@@ -1,0 +1,62 @@
+@import '../../styles/vars'
+
+.alert
+    border-radius: 5px
+    padding: 10px
+    width: 100%
+
+    &.filled 
+        &.success
+            background-color: $success
+        &.error
+            background-color: $error
+        &.info
+            background-color: $info
+        &.warning
+            background-color: $warning
+
+    &.outlined 
+        &.success
+            border: 1px solid $success
+        &.error
+            border: 1px solid $error
+        &.info
+            border: 1px solid $info
+        &.warning
+            border: 1px solid $warning
+
+.textContent
+    font-weight: 600
+    font-size: 0.938rem
+    letter-spacing: 0.05rem
+    line-height: 1.25
+    font-family: $font-text
+
+    &.filled 
+        &.success
+            color: $success-text-content
+        &.error
+            color: $error-text-content
+        &.info
+            color: $info-text-content
+        &.warning
+            color: $warning-text-content
+
+    &.outlined 
+        &.success
+            color: $success
+        &.error
+            color: $error
+        &.info
+            color: $info
+        &.warning
+            color: $success
+    &.text 
+        &.success
+            color: $success
+        &.error
+            color: $error
+        &.info
+            color: $info
+        &.warning
+            color: $success

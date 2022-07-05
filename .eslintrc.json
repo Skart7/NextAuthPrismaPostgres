@@ -1,0 +1,7 @@
+{
+  "env": { "browser": true, "node": true },
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "@next/next/no-document-import-in-page": "off"
+  }
+}

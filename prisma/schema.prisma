@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([provider, providerAccountId])
+}
+
+model Order {
+  id               String   @id @default(cuid())
+  userId           String
+  departmentMethod String
+  departmentAdress String
+  paymentMethod    String
+  paymentStatus    String
+  cartQty          Int
+  cartAmount       Int
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @default(now())
+  user             User     @relation(fields: [userId], references: [id])
+  cart             CartProduct[]
+}
+
+model CartProduct {
+  id         String  @id @default(cuid())
+  orderId    String
+  totalPrice Int
+  totalQty   Int
+  title String
+  image String
+  productId String
+  order      Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
+
+model Product {
+  id         String  @id @default(cuid())
+  title      String
+  price      Int
+  desc       String
+  image      String
+  exist      Boolean
+  imageArray String?
+  category   String
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @default(now())
+  accounts      Account[]
+  orders        Order[] 
+}

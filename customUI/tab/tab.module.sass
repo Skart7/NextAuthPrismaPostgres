@@ -1,0 +1,20 @@
+@import '../../styles/vars'
+
+.tab 
+    outline: none
+    padding: 12px
+    background: none
+    border: none
+    font-weight: 600
+    font-size: 11px
+    font-family: $font-text
+    text-transform: uppercase
+    transition: background .2s linear
+    color: $text
+    cursor: pointer
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+
+    &.active 
+        background-color: rgba($primary, .25)
+        color: $primary-text-content

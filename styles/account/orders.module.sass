@@ -1,0 +1,29 @@
+@import '../vars'
+
+.layoutPage 
+    max-width: 800px
+    width: 100%
+    margin: 0 auto
+
+.wrapperCards
+    padding: 2rem 0.5rem
+
+.wrapperEmpty
+    display: flex
+    justify-content: center
+    align-items: center
+
+.orderCard
+    margin-bottom: 0.5rem
+    padding: 0.5rem
+    cursor: pointer
+    &__info
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .amount
+            color: $primary
+            font-weight: 600
+        .status
+            color: $info

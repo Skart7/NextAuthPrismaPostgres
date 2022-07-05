@@ -1,0 +1,63 @@
+@import '../vars'
+
+.modal
+    background-color: $background-default
+    width: 100%
+    max-width: 30rem
+    padding: 1rem
+    border-radius: 10px 
+    max-height: 100%
+    height: auto
+
+    &Header
+        display: flex
+        width: 100%
+        justify-content: flex-end
+        margin-bottom: 10px
+
+    &WrapperContent
+        display: flex
+        flex-direction: column
+        grid-gap: 1vh
+
+    &WrapperList
+        overflow: hidden
+        overflow-y: scroll
+        min-height: 0
+        max-height: 50vh
+        height: 100%
+        padding: 0 5px
+
+    &InputBox
+        display: grid
+        grid-template-columns: 1fr 0.12fr
+        align-items: center
+
+        
+// card
+
+.card
+    padding: 0.3rem
+    margin-bottom: 5px
+    display: grid
+    grid-template-columns: 0.35fr 1fr 0.35fr
+    align-items: center
+    grid-gap: 1vh
+    background-color: rgba($primary, .05)
+    border-radius: 10px    
+     
+    &Image
+        text-align: center
+        position: relative
+        max-width: 60px
+        width: 100%
+    &Info
+        display: flex
+        flex-direction: column
+        align-items:  flex-start
+        cursor: pointer
+        &Label
+            height: 1.1rem
+            overflow: hidden
+    &Action
+        text-align: center

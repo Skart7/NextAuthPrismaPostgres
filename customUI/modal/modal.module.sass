@@ -1,0 +1,41 @@
+@import '../../styles/vars'
+
+.modalOverlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba($background-paper, .55)
+    transition: all .3s linear
+
+    &.show 
+        z-index: $index-modal
+        opacity: 1
+    &.hidden 
+        z-index: -$index-modal
+        opacity: 0
+
+.fade
+    transition: all .3s linear
+
+    &.show
+        opacity: 1
+        transform: translateY(0)
+    &.hidden
+        opacity: 0
+        transform: translateY(-100px)
+
+.zoom 
+    transition: all .3s linear
+
+    &.show
+        opacity: 1
+        transform: scale(1)
+    &.hidden
+        opactity: 0
+        transform: scale(0)
+    
